@@ -1,0 +1,118 @@
+.Joke {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #7890a961;
+}
+.Joke:last-child {
+  border-bottom: none;
+}
+
+.Joke-voting {
+  min-width: 10rem;
+  display: flex;
+}
+.Joke-voting button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Joke-voting i {
+  font-size: 2rem;
+}
+
+.Joke-voting i.up,
+i.down {
+  color: #758c98;
+}
+.Joke-voting i.up:hover {
+  color: #70dd70;
+}
+.Joke-voting i.down:hover {
+  color: #d05c5c;
+}
+.Joke-voting .btn-down:hover {
+  animation: move-down 0.7s;
+  animation-timing-function: ease-out;
+}
+
+.Joke-voting .btn-up:hover {
+  animation: move-up 0.7s;
+  animation-timing-function: ease-out;
+}
+.Joke-voting .circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border: 2px solid #ff9800;
+  text-align: center;
+  line-height: 2rem;
+  box-shadow: 2px 2px 8px 3px #ccc;
+}
+
+.Joke p {
+  color: #7890a9;
+  font-size: 1.2rem;
+  text-align: start;
+}
+
+.Joke-smiles {
+  font-size: 2rem;
+  box-shadow: 2px 2px 8px 3px #ccc;
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.Joke-smiles .em:hover {
+  animation: rotate 0.7s;
+  animation-timing-function: ease;
+}
+
+.Joke-text {
+  width: 100%;
+}
+
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes move-up {
+  0%,
+  50%,
+  100% {
+    transform: translateY(3px);
+  }
+  25%,
+  75% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}

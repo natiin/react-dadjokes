@@ -1,0 +1,114 @@
+.JokesDisplay-wrapper {
+  display: flex;
+  width: 80%;
+  height: 80%;
+}
+
+.JokesDisplay-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: flex-start;
+  background-color: white;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 10%);
+  width: 70%;
+  height: 90%;
+  overflow-y: scroll;
+  align-self: center;
+}
+
+.JokesDisplay-sidebar {
+  padding: 1rem;
+  background-color: #9575cd;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 10%), inset 0 0 25px #7e57c2;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.JokesDisplay-sidebar img {
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 10%), inset 0 0 25px #7e57c2;
+}
+.JokesDisplay-sidebar img:hover {
+  animation: move 1s;
+  animation-timing-function: ease;
+}
+
+.JokesDisplay-sidebar p {
+  color: white;
+  font-size: 4rem;
+}
+
+.JokesDisplay-sidebar button {
+  margin: auto;
+  color: white;
+  height: 5rem;
+  display: block;
+  width: 10rem;
+  border-radius: 150px;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  background: rgba(240, 98, 146, 1) 50%;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 30%);
+  cursor: pointer;
+  transition: background ease 0.5s, transform ease-in 0.1s;
+}
+
+.JokesDisplay-sidebar button:active {
+  transform: translate(2px, 2px);
+}
+
+.JokesDisplay-sidebar button:hover {
+  background: rgba(179, 229, 252, 0.5);
+}
+
+.JokesDisplay-loader {
+  margin: 10rem auto;
+  color: white;
+  font-size: 3rem;
+}
+.JokesDisplay-loader-text:after {
+  color: white;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 2s infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+  font-size: 3rem;
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+    transform: rotate(0);
+  }
+  25% {
+    transform: translate(3px, -3px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-3px, 3px) rotate(-1.5deg);
+  }
+  75% {
+    transform: translate(-3px, -3px) rotate(2deg);
+  }
+  100% {
+    transform: translate(3px, 3px) rotate(-2.5deg);
+  }
+}
+
+@keyframes ellipsis {
+  to {
+    width: 40px;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 40px;
+  }
+}
